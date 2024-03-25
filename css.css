@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    font-family: "Song Myung", serif;
+}
+
+.nav-link{
+    font-family: "Berkshire Swash", serif;
+}
+.twobutton{
+    position: absolute;
+    margin-left: 380px;
+    margin-top: -35px;
+}
+#sideto{
+    margin-left: -5px;
+}
+#searchin{
+    position: absolute;
+    margin-left: -260px;
+    margin-top: 20px;
+}
+#place{
+    margin-left: 430px;
+    margin-top: -38px;
+}
+#location1{
+    position: absolute;
+    margin-left: 180px;
+    margin-top: -20px;
+}
+#location2{
+    position: absolute;
+    margin-left: 520px;
+    margin-top: -20px;
+}
+.find{
+    font-size: large;
+    position: absolute;
+    margin-left: 350px;
+    margin-top: -38px;
+    padding: 5px 5px 6px 6px;
+    border-radius: 5px;
+}
+.card{
+    transition: all 0.3s;
+}
+.card:hover{
+    transform: scale(1.15);
+}
+.bmi{
+    font-family: "Song Myung", serif;
+}
+
+.box{
+    width: 500px;
+    margin-left: 280px;
+    background: #fafafa;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 20px 5px black;
+}
+
+.content{
+    padding: 0 30px;
+}
+
+.input{
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgb(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.input label{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.input input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4f7df9;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.gender{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background: #fff;
+    box-shadow: 0 0 95px -30 rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.gender.container{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 7px;
+    cursor: pointer;
+    font-size: 22px;
+}
+.gender.container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+
+.inputW{
+    background: #fff;
+    box-shadow: 0 0 95px -30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.inputW label{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.inputW input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4f7df9;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+}
+.inputH{
+    background: #fff;
+    box-shadow: 0 0 95px -30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.inputH label{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.inputH input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4f7df9;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.calculate{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: chocolate;
+    font-size: 16px;
+    border-radius: 7px;
+    padding: 12px 0;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.calculate:hover{
+    background: #0044ff;
+}
+
+.result{
+    padding: 10px 20px;
+}
+
+.result p{
+    font-weight: 600;
+    font-size: 22px;
+    color: #0000;
+    margin-bottom: 15px;
+}
+
+#result{
+    font-size: 36px;
+    font-weight: 900;
+    color: #4f7df9;
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 55px;
+    margin-bottom: 25px;
+}
+.comment{
+    display: none;
+    border: dashed 1px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+#comment{
+    color: #4f7df9;
+    font-weight: 800;
+}
+
+
+
+.gender.container:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+.gender.container input ~ .checkmark{
+    background-color: #2196f3;
+}
+
+.checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: 0 0 0;
+    background-color: 0 0 0 0.4;
+    padding-top: 300px;
+}
+
+#modalText{
+    padding-top: 8px;
+    padding-right: 5px;
+    font-size: 18px;
+    color: rgb(24,23,23);
+}
+
+.modal-wrong{
+    border: 2px solid green;
+}
+
+.close{
+    color: #aaaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.close:hover{
+    color: #d41111;
+}
+
+
+@media(max-width:700px){
+    .box{
+        width: 380px;
+    }
+    .input label{
+        font-size: 18px;
+    }
+
+    .inputH label, .inputW label{
+        font-size: 14px;
+    }
+
+    .input input, .inputH input, .inputW input{
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
